@@ -1,0 +1,18 @@
+.dropdownItem {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #37465A;
+    background: #FFFFFF;
+  
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+  

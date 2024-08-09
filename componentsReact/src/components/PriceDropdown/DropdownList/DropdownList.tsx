@@ -1,35 +1,25 @@
 import { FC } from 'react';
+import { DropdownItem } from '../DropdownItem/DropdownItem';
 import './DropdownList.scope.scss';
+import { DropdownListProps } from '../typings/typings';
+import { prices } from '../Mock/Mock';
 
-interface DropdownListProps {
-  onSelectPrice: (price: string) => void;
-}
-
-export const DropdownList: FC<DropdownListProps> = ({ onSelectPrice }) => {
-  const prices = [
-    { label: 'Lista 1', price: '2.500' },
-    { label: 'Lista 2', price: '5.000' },
-    { label: 'Lista 3', price: '10.000' },
-    { label: 'Lista 4', price: '2.500' },
-    { label: 'Lista 5', price: '5.000' },
-    { label: 'Lista 6', price: '10.000' },
-  ];
+export const DropdownList: FC<DropdownListProps> = ({ onSelectPrice, listTitle = "Lista", priceTitle = "Precio (COP)" }) => {
+ 
 
   return (
     <div className="dropdownList">
       <div className="dropdownHeader">
-        <span>Lista</span>
-        <span>Precio (COP)</span>
+        <span>{listTitle}</span>
+        <span>{priceTitle}</span>
       </div>
       {prices.map((item, index) => (
-        <div
+        <DropdownItem
           key={index}
-          className="dropdownItem"
+          label={item.label}
+          price={item.price}
           onClick={() => onSelectPrice(item.price)}
-        >
-          <span>{item.label}</span>
-          <span>{item.price}</span>
-        </div>
+        />
       ))}
     </div>
   );

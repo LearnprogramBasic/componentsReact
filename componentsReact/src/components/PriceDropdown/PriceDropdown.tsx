@@ -1,15 +1,16 @@
 import { FC, useState } from 'react';
-
-import './PriceDropdown.scope.scss'
+import './PriceDropdown.scope.scss';
 import { DropdownList } from './DropdownList/DropdownList';
+import { PriceDropdownProps } from './typings/typings';
 
-
-export const PriceDropdown: FC = () => {
+export const PriceDropdown: FC<PriceDropdownProps> = ({ icon = "fas fa-angle-down", isDropdownVisible = true }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPrice, setSelectedPrice] = useState('10.000,00');
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    if (isDropdownVisible) {
+      setIsOpen(!isOpen);
+    }
   };
 
   const handleSelectPrice = (price: string) => {
@@ -26,11 +27,11 @@ export const PriceDropdown: FC = () => {
         className="input"
       />
       <button onClick={toggleDropdown} className="button">
+        <i className={icon}></i>
       </button>
-      {isOpen && (
+      {isOpen && isDropdownVisible && (
         <DropdownList onSelectPrice={handleSelectPrice} />
       )}
     </div>
   );
 };
-
