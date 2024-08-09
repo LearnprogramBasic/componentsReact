@@ -1,14 +1,12 @@
-import { FC, useState, ReactNode } from 'react';
+import { FC, useState } from 'react';
 import MenuDropdown from './MenuDropdown/MenuDropdown';
-import './LabelWithMenu.scope.scss';
+import './ColumnHeaderMenu.scope.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { LabelWithMenuProps } from './typings/typings';
 
-interface LabelWithMenuProps {
-  menuIcon?: ReactNode;  // Las props son opcionales con el signo ?
-  labelButtonContent?: ReactNode;
-}
 
-export const LabelWithMenu: FC<LabelWithMenuProps> = ({
+
+export const ColumnHeaderMenu: FC<LabelWithMenuProps> = ({
   menuIcon = <i className="fas fa-ellipsis-v"></i>,  // Valor por defecto
   labelButtonContent = "Desc. ($)"  // Valor por defecto
 }) => {

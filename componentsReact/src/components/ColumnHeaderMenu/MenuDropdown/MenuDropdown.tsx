@@ -1,5 +1,5 @@
-// MenuDropdown.tsx
-import React, { FC, useState } from 'react';
+
+import  { FC, useState } from 'react';
 import './MenuDropdown.scope.scss';
 
 interface MenuDropdownProps {

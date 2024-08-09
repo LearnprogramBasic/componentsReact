@@ -2,7 +2,7 @@
 import { FC } from 'react';
 import './index.css';
 
-import { LabelWithMenu } from './components/LabelWithMenu/LabelWithMenu';
+import { ColumnHeaderMenu } from './components/ColumnHeaderMenu/ColumnHeaderMenu';
 import { PriceDropdown } from './components/PriceDropdown/PriceDropdown';
 
 
@@ -14,7 +14,7 @@ const App: FC = () => {
       <h1>PriceDropdown</h1>
       <PriceDropdown />
       <h1>LabelWithMenu</h1>
-      <LabelWithMenu />
+      <ColumnHeaderMenu />
     </div>
   );
 };
