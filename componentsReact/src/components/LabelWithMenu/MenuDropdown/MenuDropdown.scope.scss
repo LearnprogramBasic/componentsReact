@@ -1,0 +1,59 @@
+.menuDropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* Asegura un pequeño espacio entre el botón y el dropdown */
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 1000;
+    padding: 10px;
+  
+    .dropdownLabel {
+      display: flex;
+      align-items: center;
+      height: 22px; /* Ajuste de altura específico para el label */
+      gap: 10px; /* Espacio entre el checkbox y el label */
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #37465A;
+      text-align: left;
+  
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+  
+    .dropdownItem {
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #37465A;
+      background: #FFFFFF;
+  
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  
+    .dropdownHeader {
+      padding: 10px;
+      background-color: #EEEEEE;
+      border-bottom: 1px solid #007ECC;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #37465A;
+    }
+  }
+  
