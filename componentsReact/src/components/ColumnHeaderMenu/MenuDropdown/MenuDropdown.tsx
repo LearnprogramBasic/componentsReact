@@ -1,11 +1,9 @@
 
 import  { FC, useState } from 'react';
 import './MenuDropdown.scope.scss';
+import { MenuDropdownProps } from '../typings/typings';
 
-interface MenuDropdownProps {
-  isOpen: boolean;
-  labelText: string;
-}
+
 
 const MenuDropdown: FC<MenuDropdownProps> = ({ isOpen, labelText }) => {
   const [checked, setChecked] = useState(false);
